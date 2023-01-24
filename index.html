@@ -19,9 +19,11 @@
 <script>
   pannellum.viewer('panorama', {
     "default": {
-      "firstScene": "entrance",
+      "firstScene": "OG",
+      "title": "Villa Johanna, Bad Herrenalb, Germany",
       "author": "Raphael Volz",
-      "sceneFadeDuration": 1000
+      "sceneFadeDuration": 1000,
+      "autoLoad" : true
     },
 
     "scenes": {
@@ -46,14 +48,23 @@
             "type": "scene",
             "text": "Flur / Hallway",
             "sceneId": "flur",
-            "targetYaw": 110,
-            "targetPitch": -3
+            "targetYaw": 30,
+            "targetPitch": 15
+          },
+          {
+            "pitch": 20,
+            "yaw": 90,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 30,
+            "targetPitch": 15
           }
         ]
       },
 
       "bedroom1": {
-        "title": "Schlafzimmer 1",
+        "title": "Schlafzimmer 1 / Bedroom #1",
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
@@ -82,12 +93,366 @@
         "hotSpots": [
           {
             "pitch": -3,
-            "yaw": 190,
+            "yaw": 180,
             "type": "scene",
             "text": "Eingang / Entrance",
             "sceneId": "entrance",
             "targetYaw": 110,
             "targetPitch": -3
+          },
+          {
+            "pitch": -3,
+            "yaw": 300,
+            "type": "scene",
+            "text": "Küche / Kitchen",
+            "sceneId": "kueche",
+            "targetYaw": 0,
+            "targetPitch": -3
+          },
+          {
+            "pitch": -3,
+            "yaw": 70,
+            "type": "scene",
+            "text": "Esszimmer / Dining Room",
+            "sceneId": "esszimmer",
+            "targetYaw": 210,
+            "targetPitch": -3
+          },
+          {
+            "pitch": -3,
+            "yaw": 5,
+            "type": "scene",
+            "text": "Bad / Bathroom",
+            "sceneId": "dusche_EG",
+            "targetYaw": 130,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180535_749.jpeg
+
+      "kueche": {
+        "title": "Küche / Kitchen",
+        "hfov": 110,
+        "yaw": 5,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180535_749.jpeg",
+        "hotSpots": [
+          {
+            "pitch": -3,
+            "yaw": 300,
+            "type": "scene",
+            "text": "Flur / Hallway",
+            "sceneId": "flur",
+            "targetYaw": 190,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180522_219.jpeg
+
+      "esszimmer": {
+        "title": "Esszimmer / Dining Room",
+        "hfov": 110,
+        "yaw": 230,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180522_219.jpeg",
+        "hotSpots": [
+          {
+            "pitch": -3,
+            "yaw": 330,
+            "type": "scene",
+            "text": "Flur / Hallway",
+            "sceneId": "flur",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+
+          {
+            "pitch": -3,
+            "yaw": 215,
+            "type": "scene",
+            "text": "Wohnzimmer / Living Room",
+            "sceneId": "wohnzimmer",
+            "targetYaw": 210,
+            "targetPitch": 10
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180529_183.jpeg
+
+      "wohnzimmer": {
+        "title": "Wohnzimmer / Living Room",
+        "hfov": 210,
+        "yaw": 30,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180529_183.jpeg",
+        "hotSpots": [
+          {
+            "pitch": -3,
+            "yaw": 260,
+            "type": "scene",
+            "text": "Esszimmer",
+            "sceneId": "esszimmer",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180514_940.jpeg
+
+      "dusche_EG": {
+        "title": "Dusche EG / Shower",
+        "hfov": 210,
+        "yaw": 130,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180514_940.jpeg",
+        "hotSpots": [
+          {
+            "pitch": 10,
+            "yaw": 30,
+            "type": "scene",
+            "text": "Flur / Hallway",
+            "sceneId": "flur",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180500_684.jpeg
+
+      "OG": {
+        "title": "OG / Upstairs",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180500_684.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 290,
+            "type": "scene",
+            "text": "EG / ground floor",
+            "sceneId": "entrance",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }, {
+            "yaw": 305,
+            "type": "scene",
+            "text": "DG / top floor",
+            "sceneId": "top",
+            "targetYaw": 80,
+            "targetPitch": 10
+          }, {
+            "yaw": 330,
+            "type": "scene",
+            "text": "Bad / Main Bath",
+            "sceneId": "bath",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 260,
+            "type": "scene",
+            "text": "Schlafzimmer 3 / Bedroom #3",
+            "sceneId": "bedroom3",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 220,
+            "type": "scene",
+            "text": "Schlafzimmer 4 / Bedroom #4",
+            "sceneId": "bedroom4",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 0,
+            "type": "scene",
+            "text": "Schlafzimmer 1 / Bedroom #1",
+            "sceneId": "bedroom1",
+            "targetYaw": 0,
+            "targetPitch": 10
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180453_588.jpeg
+
+      "bedroom3": {
+        "title": "Schlafzimmer 3 / Bedroom #3",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180453_588.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 290,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180446_757.jpeg
+
+      "bedroom4": {
+        "title": "Schlafzimmer 4 / Bedroom #4",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180446_757.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 290,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180433_228.jpeg
+
+      "bedroom1": {
+        "title": "Schlafzimmer 1 / Bedroom #1",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180433_228.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 340,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180400_837.jpeg
+
+      "bath": {
+        "title": "Badezimmer OG / Main Bath",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180400_837.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 230,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 180,
+            "type": "scene",
+            "text": "Waschbecken / Sink",
+            "sceneId": "bath2",
+            "targetYaw": 30,
+            "targetPitch": 15
+          }
+        ]
+      },
+
+      // /img/IMG_20230124_180412_760.jpeg
+
+      "bath2": {
+        "title": "Badezimmer OG / Main Bath",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180412_760.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 60,
+            "type": "scene",
+            "text": "OG / Upstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 80,
+            "type": "scene",
+            "text": "Badewanne / Tub",
+            "sceneId": "bath",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180354_657.jpeg
+
+      "top": {
+        "title": "Dachgeschoss / Top Floor",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180354_657.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 250,
+            "pitch": -5,
+            "type": "scene",
+            "text": "OG / Downstairs",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": 10
+          },
+          {
+            "yaw": 170,
+            "type": "scene",
+            "text": "Spielraum / Game Room",
+            "sceneId": "game",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
+      // img/IMG_20230124_180348_637.jpeg
+
+
+      "game": {
+        "title": "Spielzimmer / Game Room",
+        "hfov": 300,
+        "pitch": 40,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180348_637.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 300,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Gallerie / Gallery",
+            "sceneId": "top",
+            "targetYaw": 300,
+            "targetPitch": 10
           }
         ]
       },
