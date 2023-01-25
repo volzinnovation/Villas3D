@@ -19,7 +19,7 @@
 <script>
   pannellum.viewer('panorama', {
     "default": {
-      "firstScene": "entrance",
+      "firstScene": "wellness",
       "title": "Villa Johanna, Bad Herrenalb, Germany",
       "author": "Raphael Volz",
       "sceneFadeDuration": 1000,
@@ -70,7 +70,7 @@
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
-        "panorama": "/img/IMG_20230124_180554_035.jpeg",
+        "panorama": "/img/IMG_20230125_115250_631.jpeg",
         "hotSpots": [
           {
             "pitch": -3,
@@ -437,8 +437,6 @@
       },
 
       // img/IMG_20230124_180348_637.jpeg
-
-
       "game": {
         "title": "Spielzimmer / Game Room",
         "hfov": 300,
@@ -458,6 +456,127 @@
           }
         ]
       },
+
+      // img/IMG_20230125_115406_014.jpeg
+      "wellness": {
+        "title": "Wellness w. Sauna",
+        "hfov": 300,
+        "pitch": 0,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230125_115406_014.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 300,
+            "pitch": -5,
+            "type": "scene",
+            "text": "EG / Upstairs",
+            "sceneId": "entrance"
+          },
+          {
+            "yaw": 190,
+            "pitch": -15,
+            "type": "scene",
+            "text": "Fitness",
+            "sceneId": "fitness"
+          }, {
+            "yaw": 20,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Suana",
+            "sceneId": "sauna"
+          }, {
+            "yaw": 130,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Terrace",
+            "sceneId": "terrace"
+          }, {
+            "yaw": 347,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Shower Sauna",
+            "sceneId": "saunashower"
+          }
+
+        ]
+      },
+      "saunashower": {
+        "title": "Shower Suana",
+        "hfov": 300,
+        "pitch": -15,
+        "yaw": 300,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180336_388.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 190,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Wellness",
+            "sceneId": "wellness"
+          }
+        ]
+      },
+
+      "sauna": {
+        "title": "Sauna",
+        "hfov": 300,
+        "pitch": 0,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230125_115357_501.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 270,
+            "pitch": -15,
+            "type": "scene",
+            "text": "Wellness",
+            "sceneId": "wellness",
+            "targetYaw": 300,
+            "targetPitch": 10
+          }
+        ]
+      },
+
+      "fitness": {
+        "title": "Fitness",
+        "hfov": 300,
+        "pitch": 0,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230125_115257_069.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 355,
+            "pitch": -15,
+            "type": "scene",
+            "text": "Wellness",
+            "sceneId": "wellness",
+            "targetYaw": 20,
+            "targetPitch": 0
+          }
+        ]
+      },
+
+
+      "terrace": {
+        "title": "Terrasse / Terrace",
+        "pitch": 0,
+        "yaw": 290,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230125_115255_086.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 90,
+            "pitch": -5,
+            "type": "scene",
+            "text": "Wellness",
+            "sceneId": "wellness",
+          }
+        ]
+      },
+
     }
   });
 </script>
