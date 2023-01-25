@@ -19,11 +19,13 @@
 <script>
   pannellum.viewer('panorama', {
     "default": {
-      "firstScene": "OG",
+      "firstScene": "entrance",
       "title": "Villa Johanna, Bad Herrenalb, Germany",
       "author": "Raphael Volz",
       "sceneFadeDuration": 1000,
-      "autoLoad" : true
+      "autoLoad" : true,
+      "autoRotate" : -3,
+      "autoRotateInactivityDelay" : 2000
     },
 
     "scenes": {
@@ -53,7 +55,7 @@
           },
           {
             "pitch": 20,
-            "yaw": 90,
+            "yaw": 180,
             "type": "scene",
             "text": "OG / Upstairs",
             "sceneId": "OG",
@@ -275,8 +277,8 @@
           {
             "yaw": 0,
             "type": "scene",
-            "text": "Schlafzimmer 1 / Bedroom #1",
-            "sceneId": "bedroom1",
+            "text": "Schlafzimmer 2 / Bedroom #2",
+            "sceneId": "bedroom2",
             "targetYaw": 0,
             "targetPitch": 10
           }
@@ -327,8 +329,8 @@
 
       // img/IMG_20230124_180433_228.jpeg
 
-      "bedroom1": {
-        "title": "Schlafzimmer 1 / Bedroom #1",
+      "bedroom2": {
+        "title": "Schlafzimmer 2 / Bedroom #2",
         "hfov": 300,
         "pitch": 40,
         "yaw": 110,
