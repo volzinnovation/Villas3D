@@ -8,18 +8,28 @@
   <script type="text/javascript" src="pannellum.js"></script>
   <style>
     #panorama {
-      width: 1800px;
-      height: 1200px;
+      width: 900px;
+      height: 600px;
     }
   </style>
 </head>
 <body>
-
-<div id="panorama"></div>
+  <div id="panorama"></div>
+  <div id="rooms"></div>
 <script>
-  pannellum.viewer('panorama', {
+
+  function get(name){
+    if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
+      return decodeURIComponent(name[1]);
+    else
+      return "entrance"; // default scene
+  }
+
+  let startScene = get("start");
+
+  let scenes = {
     "default": {
-      "firstScene": "wellness",
+      "firstScene": startScene,
       "title": "Villa Johanna, Bad Herrenalb, Germany",
       "author": "Raphael Volz",
       "sceneFadeDuration": 1000,
@@ -171,10 +181,10 @@
         "panorama": "/img/IMG_20230124_180522_219.jpeg",
         "hotSpots": [
           {
-            "pitch": -3,
-            "yaw": 330,
-            "type": "scene",
-            "text": "Flur / Hallway",
+            pitch: -3,
+            yaw: 330,
+            type: "scene",
+            text: "Flur / Hallway",
             "sceneId": "flur",
             "targetYaw": 300,
             "targetPitch": -3
@@ -385,34 +395,7 @@
         ]
       },
 
-      // /img/IMG_20230124_180412_760.jpeg
 
-      "bath2": {
-        "title": "Badezimmer OG / Main Bath",
-        "hfov": 300,
-        "pitch": 40,
-        "yaw": 110,
-        "type": "equirectangular",
-        "panorama": "/img/IMG_20230124_180412_760.jpeg",
-        "hotSpots": [
-          {
-            "yaw": 60,
-            "type": "scene",
-            "text": "OG / Upstairs",
-            "sceneId": "OG",
-            "targetYaw": 300,
-            "targetPitch": -3
-          },
-          {
-            "yaw": 80,
-            "type": "scene",
-            "text": "Badewanne / Tub",
-            "sceneId": "bath",
-            "targetYaw": 300,
-            "targetPitch": -3
-          }
-        ]
-      },
 
       // img/IMG_20230124_180354_657.jpeg
 
@@ -491,7 +474,7 @@
             "yaw": 20,
             "pitch": -5,
             "type": "scene",
-            "text": "Suana",
+            "text": "Sauna",
             "sceneId": "sauna"
           }, {
             "yaw": 130,
@@ -510,7 +493,7 @@
         ]
       },
       "saunashower": {
-        "title": "Shower Suana",
+        "title": "Shower Sauna",
         "hfov": 300,
         "pitch": -15,
         "yaw": 300,
@@ -586,7 +569,23 @@
       },
 
     }
-  });
+  }
+
+  function listScenes() {
+    return Object.keys(scenes.scenes).sort(function(a,b){return scenes.scenes[a].title.localeCompare(scenes.scenes[b].title)});
+  }
+
+  function printScenes() {
+    let html = "";
+    let list = listScenes();
+    for (const i in list) {
+      html += '<a href="./index.html?start='+ list[i] + '">' + scenes.scenes[list[i]].title + '</a></br>';
+    }
+      document.getElementById("rooms").innerHTML = html;
+  }
+
+  pannellum.viewer('panorama', scenes);
+  printScenes();
 </script>
 
 </body>
