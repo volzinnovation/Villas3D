@@ -7,15 +7,20 @@
   <link rel="stylesheet" href="pannellum.css"/>
   <script type="text/javascript" src="pannellum.js"></script>
   <style>
-    #panorama {
-      width: 900px;
-      height: 600px;
+    #rooms {
+      position: absolute;
+      top: 0px;
+      left: 10px;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
   <div id="panorama"></div>
-  <div id="rooms"></div>
+  <div id="rooms">
+    <p>
+    <img src="./img/outside.jpeg" width="230px" height=auto/> </p>
+  </div>
 <script>
 
   function get(name){
@@ -31,7 +36,7 @@
     "default": {
       "firstScene": startScene,
       "title": "Villa Johanna, Bad Herrenalb, Germany",
-      "author": "Raphael Volz",
+      "author": "Villa Johanna",
       "sceneFadeDuration": 1000,
       "autoLoad" : true,
       "autoRotate" : -3,
@@ -51,14 +56,14 @@
             "pitch": -2.1,
             "yaw": 90,
             "type": "scene",
-            "text": "Schlafzimmer 1 / bedroom 1",
+            "text": "Schlafzimmer 1",
             "sceneId": "bedroom1"
           },
           {
             "pitch": -3,
             "yaw": 270,
             "type": "scene",
-            "text": "Flur / Hallway",
+            "text": "Flur",
             "sceneId": "flur",
             "targetYaw": 30,
             "targetPitch": 15
@@ -67,7 +72,7 @@
             "pitch": 20,
             "yaw": 180,
             "type": "scene",
-            "text": "OG / Upstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 30,
             "targetPitch": 15
@@ -84,7 +89,7 @@
       },
 
       "bedroom1": {
-        "title": "Schlafzimmer 1 / Bedroom #1",
+        "title": "Schlafzimmer 1",
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
@@ -94,7 +99,7 @@
             "pitch": -3,
             "yaw": 37.1,
             "type": "scene",
-            "text": "Eingang / Entrance",
+            "text": "Eingang",
             "sceneId": "entrance",
             "targetYaw": 110,
             "targetPitch": -3
@@ -115,7 +120,7 @@
             "pitch": -3,
             "yaw": 180,
             "type": "scene",
-            "text": "Eingang / Entrance",
+            "text": "Eingang",
             "sceneId": "entrance",
             "targetYaw": 110,
             "targetPitch": -3
@@ -124,7 +129,7 @@
             "pitch": -3,
             "yaw": 300,
             "type": "scene",
-            "text": "Küche / Kitchen",
+            "text": "Küche",
             "sceneId": "kueche",
             "targetYaw": 0,
             "targetPitch": -3
@@ -133,7 +138,7 @@
             "pitch": -3,
             "yaw": 70,
             "type": "scene",
-            "text": "Esszimmer / Dining Room",
+            "text": "Esszimmer",
             "sceneId": "esszimmer",
             "targetYaw": 210,
             "targetPitch": -3
@@ -142,7 +147,7 @@
             "pitch": -3,
             "yaw": 5,
             "type": "scene",
-            "text": "Bad / Bathroom",
+            "text": "Bad",
             "sceneId": "dusche_EG",
             "targetYaw": 130,
             "targetPitch": -3
@@ -153,7 +158,7 @@
       // img/IMG_20230124_180535_749.jpeg
 
       "kueche": {
-        "title": "Küche / Kitchen",
+        "title": "Küche",
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
@@ -163,7 +168,7 @@
             "pitch": -3,
             "yaw": 300,
             "type": "scene",
-            "text": "Flur / Hallway",
+            "text": "Flur",
             "sceneId": "flur",
             "targetYaw": 190,
             "targetPitch": -3
@@ -174,7 +179,7 @@
       // img/IMG_20230124_180522_219.jpeg
 
       "esszimmer": {
-        "title": "Esszimmer / Dining Room",
+        "title": "Esszimmer",
         "hfov": 110,
         "yaw": 230,
         "type": "equirectangular",
@@ -184,7 +189,7 @@
             pitch: -3,
             yaw: 330,
             type: "scene",
-            text: "Flur / Hallway",
+            text: "Flur",
             "sceneId": "flur",
             "targetYaw": 300,
             "targetPitch": -3
@@ -194,7 +199,7 @@
             "pitch": -3,
             "yaw": 215,
             "type": "scene",
-            "text": "Wohnzimmer / Living Room",
+            "text": "Wohnzimmer",
             "sceneId": "wohnzimmer",
             "targetYaw": 210,
             "targetPitch": 10
@@ -205,7 +210,7 @@
       // img/IMG_20230124_180529_183.jpeg
 
       "wohnzimmer": {
-        "title": "Wohnzimmer / Living Room",
+        "title": "Wohnzimmer",
         "hfov": 210,
         "yaw": 30,
         "type": "equirectangular",
@@ -226,7 +231,7 @@
       // img/IMG_20230124_180514_940.jpeg
 
       "dusche_EG": {
-        "title": "Dusche EG / Shower",
+        "title": "Dusche",
         "hfov": 210,
         "yaw": 130,
         "type": "equirectangular",
@@ -236,7 +241,7 @@
             "pitch": 10,
             "yaw": 30,
             "type": "scene",
-            "text": "Flur / Hallway",
+            "text": "Flur",
             "sceneId": "flur",
             "targetYaw": 300,
             "targetPitch": -3
@@ -247,7 +252,7 @@
       // img/IMG_20230124_180500_684.jpeg
 
       "OG": {
-        "title": "OG / Upstairs",
+        "title": "Obergeschoss",
         "hfov": 300,
         "pitch": 40,
         "yaw": 110,
@@ -257,21 +262,21 @@
           {
             "yaw": 290,
             "type": "scene",
-            "text": "EG / ground floor",
+            "text": "Erdgeschoss",
             "sceneId": "entrance",
             "targetYaw": 300,
             "targetPitch": -3
           }, {
             "yaw": 305,
             "type": "scene",
-            "text": "DG / top floor",
+            "text": "Dachgeschoss",
             "sceneId": "top",
             "targetYaw": 80,
             "targetPitch": 10
           }, {
             "yaw": 330,
             "type": "scene",
-            "text": "Bad / Main Bath",
+            "text": "Bad",
             "sceneId": "bath",
             "targetYaw": 300,
             "targetPitch": -3
@@ -279,7 +284,7 @@
           {
             "yaw": 260,
             "type": "scene",
-            "text": "Schlafzimmer 3 / Bedroom #3",
+            "text": "Schlafzimmer 3",
             "sceneId": "bedroom3",
             "targetYaw": 300,
             "targetPitch": -3
@@ -287,7 +292,7 @@
           {
             "yaw": 220,
             "type": "scene",
-            "text": "Schlafzimmer 4 / Bedroom #4",
+            "text": "Schlafzimmer 4",
             "sceneId": "bedroom4",
             "targetYaw": 300,
             "targetPitch": -3
@@ -295,7 +300,7 @@
           {
             "yaw": 0,
             "type": "scene",
-            "text": "Schlafzimmer 2 / Bedroom #2",
+            "text": "Schlafzimmer 2",
             "sceneId": "bedroom2",
             "targetYaw": 0,
             "targetPitch": 10
@@ -306,9 +311,9 @@
       // img/IMG_20230124_180453_588.jpeg
 
       "bedroom3": {
-        "title": "Schlafzimmer 3 / Bedroom #3",
+        "title": "Schlafzimmer 3",
         "hfov": 300,
-        "pitch": 40,
+        "pitch": 0,
         "yaw": 110,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180453_588.jpeg",
@@ -316,7 +321,7 @@
           {
             "yaw": 290,
             "type": "scene",
-            "text": "OG / Upstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 300,
             "targetPitch": -3
@@ -327,9 +332,9 @@
       // img/IMG_20230124_180446_757.jpeg
 
       "bedroom4": {
-        "title": "Schlafzimmer 4 / Bedroom #4",
+        "title": "Schlafzimmer 4",
         "hfov": 300,
-        "pitch": 40,
+        "pitch": 0,
         "yaw": 110,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180446_757.jpeg",
@@ -337,7 +342,7 @@
           {
             "yaw": 290,
             "type": "scene",
-            "text": "OG / Upstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 300,
             "targetPitch": -3
@@ -348,9 +353,9 @@
       // img/IMG_20230124_180433_228.jpeg
 
       "bedroom2": {
-        "title": "Schlafzimmer 2 / Bedroom #2",
+        "title": "Schlafzimmer 2",
         "hfov": 300,
-        "pitch": 40,
+        "pitch": 0,
         "yaw": 110,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180433_228.jpeg",
@@ -358,7 +363,7 @@
           {
             "yaw": 340,
             "type": "scene",
-            "text": "OG / Upstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 300,
             "targetPitch": -3
@@ -369,17 +374,17 @@
       // img/IMG_20230124_180400_837.jpeg
 
       "bath": {
-        "title": "Badezimmer OG / Main Bath",
+        "title": "Badezimmer Ansicht 1",
         "hfov": 300,
-        "pitch": 40,
-        "yaw": 110,
+        "pitch": 0,
+        "yaw": 180,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180400_837.jpeg",
         "hotSpots": [
           {
             "yaw": 230,
             "type": "scene",
-            "text": "OG / Upstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 300,
             "targetPitch": -3
@@ -387,7 +392,7 @@
           {
             "yaw": 180,
             "type": "scene",
-            "text": "Waschbecken / Sink",
+            "text": "Waschbecken",
             "sceneId": "bath2",
             "targetYaw": 30,
             "targetPitch": 15
@@ -396,22 +401,49 @@
       },
 
 
+      "bath2": {
+        "title": "Badezimmer Ansicht 2",
+        "hfov": 300,
+        "pitch": 0,
+        "yaw": 110,
+        "type": "equirectangular",
+        "panorama": "/img/IMG_20230124_180412_760.jpeg",
+        "hotSpots": [
+          {
+            "yaw": 60,
+            "type": "scene",
+            "text": "Obergeschoss",
+            "sceneId": "OG",
+            "targetYaw": 300,
+            "targetPitch": -3
+          },
+          {
+            "yaw": 80,
+            "type": "scene",
+            "text": "Badewanne",
+            "sceneId": "bath",
+            "targetYaw": 300,
+            "targetPitch": -3
+          }
+        ]
+      },
+
 
       // img/IMG_20230124_180354_657.jpeg
 
       "top": {
-        "title": "Dachgeschoss / Top Floor",
+        "title": "Dachgeschoss",
         "hfov": 300,
-        "pitch": 40,
-        "yaw": 110,
+        "pitch": 10,
+        "yaw": 80,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180354_657.jpeg",
         "hotSpots": [
           {
-            "yaw": 250,
-            "pitch": -5,
+            "yaw": 255,
+            "pitch": -10,
             "type": "scene",
-            "text": "OG / Downstairs",
+            "text": "Obergeschoss",
             "sceneId": "OG",
             "targetYaw": 300,
             "targetPitch": 10
@@ -419,7 +451,7 @@
           {
             "yaw": 170,
             "type": "scene",
-            "text": "Spielraum / Game Room",
+            "text": "Spielzimmer",
             "sceneId": "game",
             "targetYaw": 300,
             "targetPitch": -3
@@ -429,9 +461,9 @@
 
       // img/IMG_20230124_180348_637.jpeg
       "game": {
-        "title": "Spielzimmer / Game Room",
+        "title": "Spielzimmer",
         "hfov": 300,
-        "pitch": 40,
+        "pitch": -5,
         "yaw": 110,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230124_180348_637.jpeg",
@@ -440,7 +472,7 @@
             "yaw": 300,
             "pitch": -5,
             "type": "scene",
-            "text": "Gallerie / Gallery",
+            "text": "Gallerie",
             "sceneId": "top",
             "targetYaw": 300,
             "targetPitch": 10
@@ -461,7 +493,7 @@
             "yaw": 300,
             "pitch": -5,
             "type": "scene",
-            "text": "EG / Upstairs",
+            "text": "Erggeschoss",
             "sceneId": "entrance"
           },
           {
@@ -480,20 +512,20 @@
             "yaw": 130,
             "pitch": -5,
             "type": "scene",
-            "text": "Terrace",
+            "text": "Terrasse",
             "sceneId": "terrace"
           }, {
             "yaw": 347,
             "pitch": -5,
             "type": "scene",
-            "text": "Shower Sauna",
+            "text": "Dusche Wellness",
             "sceneId": "saunashower"
           }
 
         ]
       },
       "saunashower": {
-        "title": "Shower Sauna",
+        "title": "Dusche Wellness",
         "hfov": 300,
         "pitch": -15,
         "yaw": 300,
@@ -552,7 +584,7 @@
 
 
       "terrace": {
-        "title": "Terrasse / Terrace",
+        "title": "Terrasse",
         "pitch": 0,
         "yaw": 290,
         "type": "equirectangular",
@@ -576,13 +608,36 @@
   }
 
   function printScenes() {
-    let html = "";
+    let html = document.getElementById("rooms").innerHTML;
     let list = listScenes();
     for (const i in list) {
       html += '<a href="./index.html?start='+ list[i] + '">' + scenes.scenes[list[i]].title + '</a></br>';
     }
       document.getElementById("rooms").innerHTML = html;
   }
+
+  let cssRules;
+
+  function manipulateStylesheet() {
+    let stylesheet = document.styleSheets[0]; // HACK only works if there is a single stylesheet
+    cssRules = stylesheet.cssRules.length
+    stylesheet.insertRule("#panorama {\n" +
+      "      top: 10px;\n" +
+      "      left: 250px;\n" +
+      "      width: " + (window.innerWidth - 250 - 20) + "px;\n" +
+      "      height: " + (window.innerHeight - 30) + "px;\n" +
+      "    }", cssRules);
+  }
+
+  function updateStylesheet() {
+    let stylesheet = document.styleSheets[0];
+    stylesheet.deleteRule(cssRules);
+    manipulateStylesheet();
+  }
+
+  manipulateStylesheet();
+
+  window.onresize = updateStylesheet();
 
   pannellum.viewer('panorama', scenes);
   printScenes();
