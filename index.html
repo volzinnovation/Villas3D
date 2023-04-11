@@ -27,7 +27,7 @@
     if(name=(new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)')).exec(location.search))
       return decodeURIComponent(name[1]);
     else
-      return "entrance"; // default scene
+      return "esszimmer"; // default scene
   }
 
   let startScene = get("start");
@@ -110,7 +110,7 @@
       // img/IMG_20230124_180541_896.jpeg
 
       "flur": {
-        "title": "Flur EG",
+        "title": "Flur",
         "hfov": 110,
         "yaw": 5,
         "type": "equirectangular",
@@ -172,7 +172,16 @@
             "sceneId": "flur",
             "targetYaw": 190,
             "targetPitch": -3
+          },
+
+          {
+            "pitch": -3,
+            "yaw": 280,
+            "type": "scene",
+            "text": "Esszimmer",
+            "sceneId": "esszimmer",
           }
+          //esszimmer
         ]
       },
 
@@ -181,7 +190,7 @@
       "esszimmer": {
         "title": "Esszimmer",
         "hfov": 110,
-        "yaw": 50,
+        "yaw": 35,
         "type": "equirectangular",
         "panorama": "/img/IMG_20230408_135537_00_047.jpg",
         "hotSpots": [
@@ -189,8 +198,8 @@
             pitch: -3,
             yaw: 270,
             type: "scene",
-            text: "Flur",
-            "sceneId": "flur",
+            text: "Küche",
+            "sceneId": "kueche",
             "targetYaw": 300,
             "targetPitch": -3
           },
@@ -231,7 +240,7 @@
       // img/IMG_20230124_180514_940.jpeg
 
       "dusche_EG": {
-        "title": "Dusche",
+        "title": "2. Bad mit Massagedusche",
         "hfov": 210,
         "yaw": 130,
         "type": "equirectangular",
@@ -375,7 +384,7 @@
       // img/IMG_20230124_180400_837.jpeg
 
       "bath": {
-        "title": "Badezimmer Badewanne",
+        "title": "1. Bad mit Badewanne 1",
         "hfov": 300,
         "pitch": 0,
         "yaw": -20,
@@ -401,7 +410,7 @@
 
 
       "bath2": {
-        "title": "Badezimmer Waschbecken",
+        "title": "1. Bad mit Badewanne 2",
         "hfov": 300,
         "pitch": 0,
         "yaw": 190,
@@ -427,7 +436,7 @@
       // img/IMG_20230124_180354_657.jpeg
 
       "top": {
-        "title": "Dachgeschoss",
+        "title": "Gallerie",
         "hfov": 300,
         "pitch": -10,
         "yaw": 180,
@@ -446,7 +455,7 @@
           {
             "yaw": 280,
             "type": "scene",
-            "text": "Spielzimmer",
+            "text": "Schlafcouch",
             "sceneId": "game",
             "targetYaw": 300,
             "targetPitch": -3
@@ -456,7 +465,7 @@
 
       // img/IMG_20230124_180348_637.jpeg
       "game": {
-        "title": "Spielzimmer",
+        "title": "Schlafcouch (Gallerie)",
         "hfov": 300,
         "pitch": -5,
         "yaw": 180,
@@ -477,7 +486,7 @@
 
       // img/IMG_20230125_115406_014.jpeg
       "wellness": {
-        "title": "Wellness and Fitness",
+        "title": "Wellness & Fitness",
         "hfov": 300,
         "pitch": 0,
         "yaw": 110,
@@ -520,7 +529,7 @@
         ]
       },
       "saunashower": {
-        "title": "Dusche Wellness",
+        "title": "3. Bad mit Regendusche",
         "hfov": 300,
         "pitch": 5,
         "yaw": 90,
@@ -625,7 +634,7 @@
         ]
       },
       "terrace2": {
-        "title": "Ausblick über dem Wasserfall",
+        "title": "Relaxen am Wasserfall",
         "pitch": 0,
         "yaw": 180,
         "type": "equirectangular",
